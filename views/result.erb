@@ -1,0 +1,17 @@
+<h1>Solution</h1>
+<table>
+  <% user_board.zip(auto_board).each do |user_row, auto_row| %>
+    <tr>
+      <% user_row.zip(auto_row).each do |user_cell, auto_cell| %>
+        <% if user_cell != auto_cell %>
+          <td><span style="background-color: #FFFF00"><%= auto_cell %></span></td>
+        <%end%>
+        <% if user_cell == auto_cell %>
+          <td><%= auto_cell %></td>
+        <%end%>
+      <%end %>
+    </tr>
+  <%end %>
+</table>
+
+<span style="background-color: #FFFF00">Highlighted cells was corrected</span>

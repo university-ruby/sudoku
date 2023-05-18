@@ -1,0 +1,10 @@
+<h1>Sudoku Solver</h1>
+<form action="/result" method="post">
+    <textarea name="board" rows="40" cols="40">
+      <% board.each do |row| %>
+          <%= row %>
+      <% end %>
+    </textarea>
+    <br>
+    <button type="submit">Check the result or solve automatically</button>
+</form>
